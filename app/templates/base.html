@@ -50,12 +50,13 @@
 {% endblock %}
 
 {% block scripts %}
-{{ super() }}
-<script>
-    $("document").ready(function(){
-        setTimeout(function(){
-            $(".alert").fadeOut();
-        }, 1500 );
-    });
-</script>
+    {{ super() }}
+    {{ moment.include_moment() }}
+    <script>
+        $("document").ready(function(){
+            setTimeout(function(){
+                $(".alert").fadeOut();
+            }, 1500 );
+        });
+    </script>
 {% endblock %}
